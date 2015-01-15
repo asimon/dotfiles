@@ -79,3 +79,6 @@
 [submodule ".vim/bundle/gem-browse"]
 	path = .vim/bundle/gem-browse
 	url = https://github.com/tpope/gem-browse
+[submodule ".vim/bundle/vim-yardoc"]
+	path = .vim/bundle/vim-yardoc
+	url = git@github.com:noprompt/vim-yardoc.git

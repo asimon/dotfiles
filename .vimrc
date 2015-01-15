@@ -486,7 +486,7 @@ if has("autocmd")
     autocmd FileType html,xhtml,wml,cf      setlocal ai et sta sw=2 sts=2
     autocmd FileType xml,xsd,xslt           setlocal ai et sta sw=2 sts=2 ts=2
     autocmd FileType eruby,yaml,ruby        setlocal ai et sta sw=2 sts=2
-    autocmd FileType ruby                   AlignCtrl p1P0W=
+    autocmd FileType ruby                   AlignCtrl =lp1P1I
     autocmd FileType cucumber               setlocal ai et sta sw=2 sts=2 ts=2
     autocmd FileType mail                   setlocal tw=72
     autocmd FileType text,txt,mail          setlocal ai com=fb:*,fb:-,n:>

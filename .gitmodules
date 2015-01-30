@@ -37,9 +37,6 @@
 [submodule ".vim/bundle/vim-rails"]
 	path = .vim/bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
-[submodule ".vim/bundle/FuzzyFinder"]
-	path = .vim/bundle/FuzzyFinder
-	url = https://github.com/vim-scripts/FuzzyFinder.git
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -82,3 +79,12 @@
 [submodule ".vim/bundle/vim-yardoc"]
 	path = .vim/bundle/vim-yardoc
 	url = git@github.com:noprompt/vim-yardoc.git
+[submodule ".vim/bundle/FuzzyFinder"]
+	path = .vim/bundle/FuzzyFinder
+	url = git@github.com:vim-scripts/FuzzyFinder.git
+[submodule ".vim/bundle/ctrlp.vim"]
+	path = .vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule ".vim/bundle/vim-ctrlp-tjump"]
+	path = .vim/bundle/vim-ctrlp-tjump
+	url = git@github.com:ivalkeen/vim-ctrlp-tjump.git

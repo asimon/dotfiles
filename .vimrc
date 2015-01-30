@@ -8,8 +8,6 @@ if has("win32")
 endif
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 silent! call pathogen#infect()
-"silent! call pathogen#infect("~/src/vim/vendor")
-"silent! call pathogen#infect("~/src/vim/bundle")
 
 set nocompatible
 set autoindent
@@ -418,10 +416,17 @@ inoremap <silent> <C-G><C-T> <C-R>=repeat(complete(col('.'),map(["%Y-%m-%d %H:%M
 map ,kk m':%s/[<space><tab><c-v><c-m>]\+$//e<NL>''
 
 " FuzzyFinder
-map <C-f>b :FufBuffer<CR>
-map <C-f>f :FufFile<CR>
-map <C-f>m :FufMruFile<CR>
-map <C-f>v :FufBufferTag<CR>
+"map <C-f>b :FufBuffer<CR>
+"map <C-f>f :FufFile<CR>
+"map <C-f>m :FufMruFile<CR>
+"map <C-f>v :FufBufferTag<CR>
+map <C-f>b :CtrlPBuffer<CR>
+map <C-f>f :CtrlP<CR>
+map <C-f>m :CtrlPMixed<CR>
+map <C-f>v :CtrlPtjump<CR>
+let g:ctrlp_tjump_only_silent = 1
+nnoremap <c-]> :CtrlPtjump<cr>
+vnoremap <c-]> :CtrlPtjumpVisual<cr>
 
 " Section: Autocommands {{{1
 " --------------------------
@@ -535,7 +540,6 @@ if has("autocmd")
           \ call IMAP('`/','`/',"tex")|
           \ call IMAP('`"\','`"\',"tex")|
           \ endif
-    autocmd FileType vbnet runtime! indent/vb.vim
     autocmd FileType vim setlocal ai et sta sw=2 sts=2 keywordprg=:help
     autocmd FileType * if exists("+omnifunc") && &omnifunc == "" | setlocal omnifunc=syntaxcomplete#Complete | endif
     autocmd FileType * if exists("+completefunc") && &completefunc == "" | setlocal completefunc=syntaxcomplete#Complete | endif

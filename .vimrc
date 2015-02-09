@@ -428,6 +428,9 @@ let g:ctrlp_tjump_only_silent = 1
 nnoremap <c-]> :CtrlPtjump<cr>
 vnoremap <c-]> :CtrlPtjumpVisual<cr>
 
+" Airplane
+let g:airline_powerline_fonts = 1
+
 " Section: Autocommands {{{1
 " --------------------------
 
@@ -445,7 +448,6 @@ if has("autocmd")
 
     autocmd FocusLost   * silent! wall
     autocmd FocusGained * if !has('win32') | silent! call fugitive#reload_status() | endif
-    autocmd SourcePre */macros/less.vim set laststatus=0 cmdheight=1
 
     autocmd User Rails-javascript setlocal ts=2
     autocmd User Fugitive if filereadable(fugitive#buffer().repo().dir('fugitive.vim')) | source `=fugitive#buffer().repo().dir('fugitive.vim')` | endif

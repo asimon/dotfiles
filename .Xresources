@@ -1,17 +1,24 @@
 XTerm*bellIsUrgent: true
+
+!Xft.hinting:true
+!Xft.hintstyle:hingtsfull
+!Xft.rgba:subpixel
+!Xft.dpi:96
+
 URxvt*urgentOnBell: true
 !URxvt.scrollstyle: plain
 URxvt.scrollBar: false
-URxvt.font: xft:Inconsolata:size=13
-!URxvt.perl-ext-common:  default,matcher,tabbed
+!URxvt.letterSpace:-1
+URxvt*font: xft:Inconsolata:regular:size=11
+URxvt*boldfont: xft:Inconsolata:style=bold:size=11
 URxvt.perl-ext-common:  default,matcher
-URxvt.url-launcher:      /usr/bin/firefox
+URxvt.url-launcher: /bin/firefox
 URxvt.matcher.button:   1
 URxvt.loginShell: true
 URxvt.scrollTtyOutput: false
 URxvt.scrollWithBuffer: true
 URxvt.scrollTtyKeypress: true
-URxvt.saveLines: 10000
+URxvt.saveLines: 30000
 
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~

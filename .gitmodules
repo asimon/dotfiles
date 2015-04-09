@@ -94,3 +94,21 @@
 [submodule ".vim/bundle/vim-coffee-script"]
 	path = .vim/bundle/vim-coffee-script
 	url = git@github.com:kchmck/vim-coffee-script.git
+[submodule ".vim/bundle/unicode.vim"]
+	path = .vim/bundle/unicode.vim
+	url = git@github.com:chrisbra/unicode.vim.git
+[submodule ".vim/bundle/vim-tmux-focus-events"]
+	path = .vim/bundle/vim-tmux-focus-events
+	url = git://github.com/tmux-plugins/vim-tmux-focus-events.git
+[submodule ".vim/bundle/tmuxline.vim"]
+	path = .vim/bundle/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim
+[submodule ".tmux/plugins/tmux-copycat"]
+	path = .tmux/plugins/tmux-copycat
+	url = git@github.com:tmux-plugins/tmux-copycat.git
+[submodule ".tmux/plugins/tmux-yank"]
+	path = .tmux/plugins/tmux-yank
+	url = git@github.com:tmux-plugins/tmux-yank.git
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = git@github.com:tmux-plugins/tpm.git

@@ -423,7 +423,8 @@ map ,kk m':%s/[<space><tab><c-v><c-m>]\+$//e<NL>''
 map <C-f>b :CtrlPBuffer<CR>
 map <C-f>f :CtrlP<CR>
 map <C-f>m :CtrlPMixed<CR>
-map <C-f>v :CtrlPtjump<CR>
+map <C-f>t :CtrlPtjump<CR>
+map <C-f>v :CtrlPBufTag<CR>
 let g:ctrlp_tjump_only_silent = 1
 nnoremap <c-]> :CtrlPtjump<cr>
 vnoremap <c-]> :CtrlPtjumpVisual<cr>
@@ -544,7 +545,7 @@ if has("autocmd")
     autocmd FileType vim setlocal ai et sta sw=2 sts=2 keywordprg=:help
     autocmd FileType * if exists("+omnifunc") && &omnifunc == "" | setlocal omnifunc=syntaxcomplete#Complete | endif
     autocmd FileType * if exists("+completefunc") && &completefunc == "" | setlocal completefunc=syntaxcomplete#Complete | endif
-    autocmd FileType ruby if !exists("fancy_activated") | let fancy_activated = 1 | Fancy | endif
+    autocmd FileType * if !exists("fancy_activated") | let fancy_activated = 1 | Fancy | endif
   augroup END "}}}2
 endif " has("autocmd")
 

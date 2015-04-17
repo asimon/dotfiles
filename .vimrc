@@ -343,11 +343,6 @@ if has("eval")
   command! -buffer -bar -range -nargs=? Slide :exe 'norm m`'|exe '<line1>,<line2>move'.((<q-args> < 0 ? <line1>-1 : <line2>)+(<q-args>=='' ? 1 : <q-args>))|exe 'norm ``'
 endif
 
-inoremap     <C-X><C-@> <C-A>
-" Emacs style mappings
-inoremap          <C-A> <C-O>^
-cnoremap          <C-A> <Home>
-cnoremap     <C-X><C-A> <C-A>
 " If at end of a line of spaces, delete back to the previous line.
 " Otherwise, <Left>
 inoremap <silent> <C-B> <C-R>=getline('.')=~'^\s*$'&&col('.')>strlen(getline('.'))?"0\<Lt>C-D>\<Lt>Esc>kJs":"\<Lt>Left>"<CR>
@@ -416,10 +411,6 @@ inoremap <silent> <C-G><C-T> <C-R>=repeat(complete(col('.'),map(["%Y-%m-%d %H:%M
 map ,kk m':%s/[<space><tab><c-v><c-m>]\+$//e<NL>''
 
 " FuzzyFinder
-"map <C-f>b :FufBuffer<CR>
-"map <C-f>f :FufFile<CR>
-"map <C-f>m :FufMruFile<CR>
-"map <C-f>v :FufBufferTag<CR>
 map <C-f>b :CtrlPBuffer<CR>
 map <C-f>f :CtrlP<CR>
 map <C-f>m :CtrlPMixed<CR>
@@ -428,6 +419,14 @@ map <C-f>v :CtrlPBufTag<CR>
 let g:ctrlp_tjump_only_silent = 1
 nnoremap <c-]> :CtrlPtjump<cr>
 vnoremap <c-]> :CtrlPtjumpVisual<cr>
+
+" /incsearch.vim
+let g:incsearch#auto_nohlsearch = 0
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+map n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)
+map N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)
 
 " Airplane
 let g:airline_powerline_fonts = 1
@@ -554,20 +553,6 @@ endif " has("autocmd")
 
 " Switch syntax highlighting on, when the terminal has colors
 if (&t_Co > 2 || has("gui_running")) && has("syntax")
-  function! s:initialize_font()
-    if exists("&guifont")
-      if has("mac")
-        set guifont=Monaco:h12
-      elseif has("unix")
-        if &guifont == ""
-          set guifont=bitstream\ vera\ sans\ mono\ 11
-        endif
-      elseif has("win32")
-        set guifont=Consolas:h11,Courier\ New:h10
-      endif
-    endif
-  endfunction
-
   command! -bar -nargs=0 Bigger  :let &guifont = substitute(&guifont,'\d\+$','\=submatch(0)+1','')
   command! -bar -nargs=0 Smaller :let &guifont = substitute(&guifont,'\d\+$','\=submatch(0)-1','')
   noremap <M-,>        :Smaller<CR>
@@ -594,8 +579,6 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax")
       let g:solarized_contrast="normal"
       let g:solarized_visibility="normal"
       let g:solarized_diffmode="normal"
-      let g:solarized_termtrans=0
-      let g:solarized_degrade=0
       let g:solarized_menu=1
       let g:solarized_hitrail=1    "default value is 0
       "set background=dark
@@ -613,7 +596,7 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax")
     autocmd GUIEnter *  set background=light title icon cmdheight=2 lines=25 columns=80 guioptions-=T
     autocmd GUIEnter *  if has("diff") && &diff | set columns=165 | endif
 "    autocmd GUIEnter *  silent! colorscheme vividchalk
-    autocmd GUIEnter *  call s:initialize_font()
+    autocmd GUIEnter *  set guifont=Inconsolata\ 14
     autocmd GUIEnter *  let $GIT_EDITOR = 'false'
     autocmd Syntax css  syn sync minlines=50
     autocmd Syntax csh  hi link cshBckQuote Special | hi link cshExtVar PreProc | hi link cshSubst PreProc | hi link cshSetVariables Identifier

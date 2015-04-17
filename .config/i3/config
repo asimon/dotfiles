@@ -24,8 +24,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+q exec i3lock
 
 # kill focused window
@@ -162,12 +161,6 @@ for_window [class="Kmix"] floating enable;
 for_window [class="Plasmoidviewer"] floating enable;
 for_window [class="Klipper"] floating enable; border none
 
-#exec --no-startup-id /usr/libexec/gnome-settings-daemon
-exec --no-startup-id "/usr/bin/xrandr --output HDMI1 --auto --right-of HDMI2"
-exec --no-startup-id "xset r rate 150 55"
-exec --no-startup-id "/usr/bin/xrdb ~/.Xresources"
-exec --no-startup-id "~/.bash_profile"
-
 workspace 1 output HDMI2
 workspace 2 output HDMI1
 workspace 3 output HDMI1
@@ -186,12 +179,17 @@ bar {
 	}
 }
 
-#exec --no-startup-id dunst
+#exec --no-startup-id /usr/libexec/gnome-settings-daemon
+exec --no-startup-id "xrandr --output HDMI1 --auto --right-of HDMI2"
+exec --no-startup-id "xset r rate 150 55"
+exec --no-startup-id "xrdb ~/.Xresources"
+exec --no-startup-id "~/.bash_profile"
+exec --no-startup-id "exec xautolock -time 10 -locker 'i3lock' &"
+exec --no-startup-id dunst
 exec --no-startup-id nm-applet
 exec --no-startup-id i3-msg 'workspace 1; layout tabbed'
-#exec --no-startup-id i3-msg 'workspace 1; exec konsole; workspace 1'
-#exec --no-startup-id i3-msg 'workspace 2; layout tabbed; exec firefox; workspace 1'
-#exec --no-startup-id i3-msg 'workspace 3; layout splith; exec empathy; workspace 1'
-#exec --no-startup-id i3-msg 'workspace 3; layout splith; exec kopete; workspace 1'
-exec --no-startup-id i3-msg 'workspace 4; layout splitv; exec thunderbird; workspace 1'
+exec --no-startup-id i3-msg 'workspace 1; exec gnome-terminal; workspace 1'
+exec --no-startup-id i3-msg 'workspace 2; layout tabbed; exec firefox; workspace 1'
+exec --no-startup-id i3-msg 'workspace 3; layout splith; exec kopete; workspace 1'
+exec --no-startup-id i3-msg 'workspace 4; layout splitv; exec kmail; workspace 1'
 

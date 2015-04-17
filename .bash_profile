@@ -23,6 +23,7 @@ eval `dircolors -b ~/.dircolors`
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # For i3-sensible-terminal
+# Konsole has a bug and doesn't reset the title when exiting a ssh or su session
 export TERMINAL=gnome-terminal
 
 

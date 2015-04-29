@@ -314,8 +314,11 @@ endif
 
 digraph ./ 8230
 
+" Makes quoted-printable readable
+nnoremap <Leader>Q :%s/=\(\x\x\<BAR>\n\)/\=submatch(1)=='\n'?'':nr2char('0x'.submatch(1))/ge<CR>
+vnoremap <Leader>Q :s/=\(\x\x\<BAR>\n\)/\=submatch(1)=='\n'?'':nr2char('0x'.submatch(1))/ge<CR>
+
 nnoremap Y  y$
-nnoremap Q  :<C-U>q<CR>
 if exists(":nohls")
   nnoremap <silent> <C-L> :nohls<CR><C-L>
 endif

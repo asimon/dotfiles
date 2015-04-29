@@ -184,7 +184,7 @@ exec --no-startup-id "xrandr --output HDMI1 --auto --right-of HDMI2"
 exec --no-startup-id "xset r rate 150 55"
 exec --no-startup-id "xrdb ~/.Xresources"
 exec --no-startup-id "~/.bash_profile"
-exec --no-startup-id "exec xautolock -time 10 -locker 'i3lock' &"
+exec --no-startup-id "exec xautolock -time 5 -locker 'i3lock' &"
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
 exec --no-startup-id i3-msg 'workspace 1; layout tabbed'

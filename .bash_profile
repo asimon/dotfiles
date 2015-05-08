@@ -24,6 +24,6 @@ eval `dircolors -b ~/.dircolors`
 
 # For i3-sensible-terminal
 # Konsole has a bug and doesn't reset the title when exiting a ssh or su session
-export TERMINAL=gnome-terminal
+export TERMINAL=konsole
 
 

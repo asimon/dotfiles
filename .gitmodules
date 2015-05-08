@@ -124,3 +124,6 @@
 [submodule ".vim/bundle/vim-http-client"]
 	path = .vim/bundle/vim-http-client
 	url = git@github.com:aquach/vim-http-client.git
+[submodule ".zsh.d/zsh-git-prompt"]
+	path = .zsh.d/zsh-git-prompt
+	url = git@github.com:olivierverdier/zsh-git-prompt.git

@@ -415,6 +415,7 @@ map ,kk m':%s/[<space><tab><c-v><c-m>]\+$//e<NL>''
 
 " FuzzyFinder
 map <C-f>b :CtrlPBuffer<CR>
+map <C-f>l :CtrlPLine<CR>
 map <C-f>f :CtrlP<CR>
 map <C-f>m :CtrlPMixed<CR>
 map <C-f>t :CtrlPtjump<CR>

@@ -180,6 +180,7 @@ bar {
 }
 
 #exec --no-startup-id /usr/libexec/gnome-settings-daemon
+exec --no-startup-id "setxkbmap -option caps:hyper -option compose:rctrl"
 exec --no-startup-id "xrandr --output HDMI1 --auto --right-of HDMI2"
 exec --no-startup-id "xset r rate 150 55"
 exec --no-startup-id "xrdb ~/.Xresources"

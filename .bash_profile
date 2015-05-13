@@ -40,7 +40,7 @@ get_return_code() {
 
 PROMPT_COMMAND="get_return_code; find_git_branch; find_git_dirty"
 
-PS1="\[\e[1;40;36m\]\u@\h\[\e[44;30m\]\[\e[44;30m\] \$git_branch\[\e[37m\]\$git_dirty \[\e[00m\]\$(if [[ \$promptstatus == 0 ]]; then echo \"\[\e[42;34m\]\[\e[1;42;37m\] OK \"; else echo \"\[\e[41;34m\]\[\e[1;37;41m\] [\$promptstatus] \"; fi)\[\e[00m\] \w\[\e[1;34m\]\$\[\e[m\] "
+PS1="\[\e[0;40;37m\]\u@\h\[\e[102;30m\]\[\e[102;37m\] \$git_branch \[\e[37m\]\$git_dirty \[\e[00m\]\[\e[104;92m\]\[\e[104;37m\] \w \$(if [[ \$promptstatus == 0 ]]; then echo \"\[\e[47;94m\]\[\e[0;47;36m\] OK \"; else echo \"\[\e[47;94m\]\[\e[1;47;31m\] \$promptstatus \"; fi)\[\e[0;0;37m\]\[\e[m\] "
 PS2='\[\e[1;33;41m\] \342\230\255 \[\e[m\] '
 PS1="$PS1\[\a\]"
 

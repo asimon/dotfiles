@@ -189,7 +189,7 @@ exec --no-startup-id "exec xautolock -time 5 -locker 'i3lock' &"
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
 exec --no-startup-id i3-msg 'workspace 1; layout tabbed'
-exec --no-startup-id i3-msg 'workspace 1; exec gnome-terminal; workspace 1'
+exec --no-startup-id i3-msg 'workspace 1; exec konsole; workspace 1'
 exec --no-startup-id i3-msg 'workspace 2; layout tabbed; exec firefox; workspace 1'
 exec --no-startup-id i3-msg 'workspace 3; layout splith; exec kopete; workspace 1'
 exec --no-startup-id i3-msg 'workspace 4; layout splitv; exec kmail; workspace 1'

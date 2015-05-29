@@ -15,13 +15,6 @@ alias grep='grep --color'
 
 alias bex='bundle exec'
 
-alias live1='ssh deploy@bs-live-01'
-alias live2='ssh deploy@bs-live-02'
-alias dev1='ssh deploy@bs-dev-01'
-alias dev2='ssh deploy@bs-dev-02'
-alias tld1='ssh deploy@bs-tldinfo-01'
-alias tld2='ssh deploy@bs-tldinfo-02'
-
 # Set tmux window name for ssh sessions
 ssh() {
     if [ "$(ps -p $(ps -p $$ -o ppid=) -o comm=)" = "tmux" ]; then

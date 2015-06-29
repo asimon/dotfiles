@@ -69,55 +69,55 @@
 	url = https://github.com/tpope/gem-browse
 [submodule ".vim/bundle/vim-yardoc"]
 	path = .vim/bundle/vim-yardoc
-	url = git@github.com:noprompt/vim-yardoc.git
+	url = https://github.com/noprompt/vim-yardoc.git
 [submodule ".vim/bundle/FuzzyFinder"]
 	path = .vim/bundle/FuzzyFinder
-	url = git@github.com:vim-scripts/FuzzyFinder.git
+	url = https://github.com/vim-scripts/FuzzyFinder
 [submodule ".vim/bundle/ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule ".vim/bundle/vim-ctrlp-tjump"]
 	path = .vim/bundle/vim-ctrlp-tjump
-	url = git@github.com:ivalkeen/vim-ctrlp-tjump.git
+	url = https://github.com/ivalkeen/vim-ctrlp-tjump
 [submodule ".vim/bundle/vim-airline"]
 	path = .vim/bundle/vim-airline
-	url = git@github.com:bling/vim-airline.git
+	url = https://github.com/bling/vim-airline
 [submodule ".vim/bundle/tabular"]
 	path = .vim/bundle/tabular
-	url = git@github.com:godlygeek/tabular.git
+	url = https://github.com/godlygeek/tabular.git
 [submodule ".vim/bundle/vim-coffee-script"]
 	path = .vim/bundle/vim-coffee-script
-	url = git@github.com:kchmck/vim-coffee-script.git
+	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule ".vim/bundle/unicode.vim"]
 	path = .vim/bundle/unicode.vim
-	url = git@github.com:chrisbra/unicode.vim.git
+	url = https://github.com/chrisbra/unicode.vim.git
 [submodule ".vim/bundle/tmuxline.vim"]
 	path = .vim/bundle/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim
 [submodule ".tmux/plugins/tmux-copycat"]
 	path = .tmux/plugins/tmux-copycat
-	url = git@github.com:tmux-plugins/tmux-copycat.git
+	url = https://github.com/tmux-plugins/tmux-copycat.git
 [submodule ".tmux/plugins/tmux-yank"]
 	path = .tmux/plugins/tmux-yank
-	url = git@github.com:tmux-plugins/tmux-yank.git
+	url = https://github.com/tmux-plugins/tmux-yank.git
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
-	url = git@github.com:tmux-plugins/tpm.git
+	url = https://github.com/tmux-plugins/tpm.git
 [submodule ".vim/bundle/incsearch.vim"]
 	path = .vim/bundle/incsearch.vim
-	url = git@github.com:haya14busa/incsearch.vim.git
+	url = https://github.com/haya14busa/incsearch.vim.git
 [submodule ".vim/bundle/vim-anzu"]
 	path = .vim/bundle/vim-anzu
-	url = git@github.com:osyo-manga/vim-anzu.git
+	url = https://github.com/osyo-manga/vim-anzu.git
 [submodule ".vim/bundle/csv.vim"]
 	path = .vim/bundle/csv.vim
-	url = git@github.com:chrisbra/csv.vim.git
+	url = https://github.com/chrisbra/csv.vim.git
 [submodule ".vim/bundle/vim-http-client"]
 	path = .vim/bundle/vim-http-client
-	url = git@github.com:aquach/vim-http-client.git
+	url = https://github.com/aquach/vim-http-client.git
 [submodule ".zsh.d/zsh-git-prompt"]
 	path = .zsh.d/zsh-git-prompt
-	url = git@github.com:olivierverdier/zsh-git-prompt.git
+	url = https://github.com/olivierverdier/zsh-git-prompt.git
 [submodule ".vim/bundle/vim-tmux-focus-events"]
 	path = .vim/bundle/vim-tmux-focus-events
 	url = https://github.com/tmux-plugins/vim-tmux-focus-events.git

@@ -190,11 +190,11 @@ command! -bar -nargs=* -bang -complete=file Rename :
 command! -bar Invert :let &background = (&background=="light"?"dark":"light")
 
 function! Fancy()
-  if &number
+  if &relativenumber
     if has("gui_running")
       let &columns=&columns-12
     endif
-    windo set nonumber foldcolumn=0
+    windo set nonumber norelativenumber foldcolumn=0
     if exists("+cursorcolumn")
       set nocursorcolumn nocursorline
     endif
@@ -202,7 +202,7 @@ function! Fancy()
     if has("gui_running")
       let &columns=&columns+12
     endif
-    windo set number foldcolumn=4
+    windo set nonumber relativenumber foldcolumn=4
     if exists("+cursorcolumn")
       set cursorline
     endif
@@ -307,8 +307,19 @@ command! -bar Run :execute Run()
 
   runtime! plugin/matchit.vim
   runtime! macros/matchit.vim
-endif
 
+  function! NumberToggle()
+    if(&relativenumber == 1)
+      set number
+      set norelativenumber
+    else
+      set nonumber
+      set relativenumber
+    endif
+  endfunction
+  nnoremap <C-n> :call NumberToggle()<cr>
+endif
+"}}}
 " Section: Mappings {{{1
 " ----------------------
 

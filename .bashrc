@@ -1,5 +1,7 @@
 # .bashrc
 
+LANG=en_US.UTF-8
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc

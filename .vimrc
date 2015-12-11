@@ -444,7 +444,9 @@ map n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)
 map N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)
 
 " Airplane
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
+
+let g:tmuxline_powerline_separators = 0
 
 " Section: Autocommands {{{1
 " --------------------------
@@ -596,7 +598,7 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax")
       let g:solarized_diffmode="normal"
       let g:solarized_menu=1
       let g:solarized_hitrail=1    "default value is 0
-      "set background=dark
+      set background=light
       colorscheme solarized
     elseif filereadable(expand("~/.vim/colors/github.vim"))
        colorscheme github
@@ -606,11 +608,9 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax")
   augroup RCVisual
     autocmd!
 
-    "autocmd VimEnter *  if !has("gui_running") | set background=dark notitle noicon | endif
     autocmd VimEnter *  if !has("gui_running") | set notitle noicon | endif
     autocmd GUIEnter *  set background=light title icon cmdheight=2 lines=25 columns=80 guioptions-=T
     autocmd GUIEnter *  if has("diff") && &diff | set columns=165 | endif
-"    autocmd GUIEnter *  silent! colorscheme vividchalk
     autocmd GUIEnter *  set guifont=Inconsolata\ 14
     autocmd GUIEnter *  let $GIT_EDITOR = 'false'
     autocmd Syntax css  syn sync minlines=50

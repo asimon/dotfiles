@@ -444,9 +444,9 @@ map n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)
 map N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)
 
 " Airplane
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 
-let g:tmuxline_powerline_separators = 0
+let g:tmuxline_powerline_separators = 1
 
 " Section: Autocommands {{{1
 " --------------------------
@@ -512,7 +512,7 @@ if has("autocmd")
     autocmd FileType eruby,yaml,ruby        setlocal ai et sta sw=2 sts=2
     autocmd FileType coffee                 setlocal ai et sta sw=2 sts=2 ts=2
     autocmd FileType cucumber               setlocal ai et sta sw=2 sts=2 ts=2
-    autocmd FileType mail                   setlocal tw=72
+    autocmd FileType mail                   setlocal tw=72 spell
     autocmd FileType text,txt,mail          setlocal ai com=fb:*,fb:-,n:>
     autocmd FileType sh,zsh,csh,tcsh        inoremap <silent> <buffer> <C-X>! #!/bin/<C-R>=&ft<CR>
     autocmd FileType perl,python,ruby       inoremap <silent> <buffer> <C-X>! #!/usr/bin/<C-R>=&ft<CR>

@@ -8,12 +8,12 @@ XTerm*bellIsUrgent: true
 URxvt*urgentOnBell: true
 !URxvt.scrollstyle: plain
 URxvt.scrollBar: false
-!URxvt.letterSpace:-1
-URxvt*font: xft:Inconsolata:regular:size=11
-URxvt*boldfont: xft:Inconsolata:style=bold:size=11
+URxvt.letterSpace:-2
+URxvt*font: xft:Source Code Pro:style=medium:size=13,xft:DejaVu Sans Mono:style=Book:size=13
+URxvt*boldfont: xft:Source Code Pro:style=bold:size=13,xft:DejaVu Sans Mono:style=Book:size=13
 URxvt.perl-ext-common:  default,matcher
-URxvt.url-launcher: /bin/firefox
-URxvt.matcher.button:   1
+URxvt.url-launcher: firefox
+URxvt.matcher.button: 1
 URxvt.loginShell: true
 URxvt.scrollTtyOutput: false
 URxvt.scrollWithBuffer: true
@@ -55,6 +55,23 @@ URxvt*keysym.End: \033[4~
 ! #define S_base2         #eee8d5
 ! #define S_base3         #fdf6e3
 
+!*color0:                  S_base02
+!*color1:                  S_red
+!*color2:                  S_green
+!*color3:                  S_yellow
+!*color4:                  S_blue
+!*color5:                  S_magenta
+!*color6:                  S_cyan
+!*color7:                  S_base2
+!*color9:                  S_orange
+!*color8:                  S_base03
+!*color10:                 S_base01
+!*color11:                 S_base00
+!*color12:                 S_base0
+!*color13:                 S_violet
+!*color14:                 S_base1
+!*color15:                 S_base3
+
 ! Light
 
 #define S_base03        #fdf6e3
@@ -65,7 +82,6 @@ URxvt*keysym.End: \033[4~
 #define S_base1         #586e75
 #define S_base2         #073642
 #define S_base3         #002b36
-
 
 ! To only apply colors to your terminal, for example, prefix
 ! the color assignment statement with its name. Example:
@@ -80,20 +96,20 @@ URxvt*keysym.End: \033[4~
 *pointerColorBackground:  S_base01
 *pointerColorForeground:  S_base1
 
-*color0:                  S_base02
+*color0:                  S_base2
 *color1:                  S_red
 *color2:                  S_green
 *color3:                  S_yellow
 *color4:                  S_blue
 *color5:                  S_magenta
 *color6:                  S_cyan
-*color7:                  S_base2
+*color7:                  S_base02
 *color9:                  S_orange
-*color8:                  S_base03
-*color10:                 S_base01
-*color11:                 S_base00
-*color12:                 S_base0
+*color8:                  S_base3
+*color10:                 S_base1
+*color11:                 S_base0
+*color12:                 S_base00
 *color13:                 S_violet
-*color14:                 S_base1
-*color15:                 S_base3
+*color14:                 S_base01
+*color15:                 S_base03
 

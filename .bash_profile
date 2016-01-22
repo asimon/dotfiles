@@ -19,7 +19,7 @@ find_git_branch() {
     if [[ "$branch" == "HEAD" ]]; then
       branch='detached*'
     fi
-    git_branch="⎇ $branch"
+    git_branch=" $branch"
   else
     git_branch=""
   fi
@@ -40,7 +40,7 @@ get_return_code() {
 
 PROMPT_COMMAND="get_return_code; find_git_branch; find_git_dirty"
 
-PS1="\[\e[0;40;37m\]\u@\h\[\e[102;30m\]▶\[\e[102;37m\] \$git_branch \[\e[37m\]\$git_dirty \[\e[00m\]\[\e[104;92m\]▶\[\e[104;37m\] \w \$(if [[ \$promptstatus == 0 ]]; then echo \"\[\e[47;94m\]▶\[\e[0;47;36m\] OK \"; else echo \"\[\e[47;94m\]▶\[\e[1;47;31m\] \$promptstatus \"; fi)\[\e[0;0;37m\]▶\[\e[m\] "
+PS1="\[\e[0;40;37m\]\u@\h\[\e[102;30m\]\[\e[102;37m\] \$git_branch \[\e[37m\]\$git_dirty \[\e[00m\]\[\e[104;92m\]\[\e[104;37m\] \w \$(if [[ \$promptstatus == 0 ]]; then echo \"\[\e[47;94m\]\[\e[0;47;36m\] OK \"; else echo \"\[\e[47;94m\]\[\e[1;47;31m\] \$promptstatus \"; fi)\[\e[0;0;37m\]\[\e[m\] "
 PS2='\[\e[1;33;41m\] \342\230\255 \[\e[m\] '
 PS1="$PS1\[\a\]"
 

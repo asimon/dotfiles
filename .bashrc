@@ -23,5 +23,7 @@ EDITOR=vimx
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-TERM=xterm-256color
+if [ "$TERM" == "xterm" ]; then
+    TERM=xterm-256color
+fi
 

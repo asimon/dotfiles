@@ -12,7 +12,7 @@ URxvt.letterSpace:-2
 URxvt*font: xft:Source Code Pro:style=medium:size=13,xft:DejaVu Sans Mono:style=Book:size=13
 URxvt*boldfont: xft:Source Code Pro:style=bold:size=13,xft:DejaVu Sans Mono:style=Book:size=13
 URxvt.perl-ext-common:  default,matcher
-URxvt.url-launcher: firefox
+URxvt.url-launcher: xdg-open
 URxvt.matcher.button: 1
 URxvt.loginShell: true
 URxvt.scrollTtyOutput: false
@@ -20,8 +20,8 @@ URxvt.scrollWithBuffer: true
 URxvt.scrollTtyKeypress: true
 URxvt.saveLines: 30000
 
-URxvt*keysym.Home: \033[1~
-URxvt*keysym.End: \033[4~
+!URxvt.keysym.Home: \033[1~
+!URxvt.keysym.End: \033[4~
 !URxvt*keysym.Prior:         \033[5~
 !URxvt*keysym.Next:          \033[6~
 !URxvt*keysym.Up:            \033[A

@@ -8,9 +8,6 @@ set charset=utf-8
 set send_charset="us-ascii:utf-8"
 set beep_new
 
-set postponed="=Drafts"
-set record="=Sent"
-
 set edit_headers
 set editor=vim
 set mime_forward
@@ -35,8 +32,8 @@ set message_cachedir=~/.cache/mutt/messages
 set folder_format="%2C %t %6N %s %f"
 set date_format="!%a, %b %d, %Y at %I:%M:%S%p %Z"
 
-folder-hook   *[sS]ent* 'set index_format="%2C | %Z [%d] %-30.30t (%-4.4c) %?M?<%M> ?%s"'
-folder-hook ! *[sS]ent* 'set index_format="%2C | %Z [%d] %-30.30F (%-4.4c) %?M?<%M> ?%s"'
+folder-hook   *[sS]ent* 'set index_format="%2C | %Z [%d] %-30.30t (%4c) %?M?<%M> ?%s"'
+folder-hook ! *[sS]ent* 'set index_format="%2C | %Z [%d] %-30.30L (%4c) %?M?<%M> ?%s"'
 
 auto_view text/html
 alternative_order text/enriched text/plain text/html
@@ -52,6 +49,7 @@ bind pager <down> next-line
 
 bind index - collapse-thread
 bind index _ collapse-all
+bind index 'G' imap-fetch-mail
 
 source $alias_file
 source ~/.mutt/accounts

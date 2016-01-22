@@ -7,7 +7,7 @@ color tilde         white           default
 color message       cyan            default
 color markers       red             black
 color attachment    black           default
-color search        brightmagenta   default
+color search        brightwhite     color10
 color status        brightblue      white
 color indicator     brightwhite     color10
 color tree          yellow          default                                     # arrow in threads
@@ -51,7 +51,6 @@ color index         yellow          red             "~v~(~D)"                   
 
 # message headers ------------------------------------------------------
 
-#color header        brightcyan      default         "^"
 color hdrdefault    brightcyan      default
 color header        brightblue      default         "^(From)"
 color header        blue            default         "^(Subject)"

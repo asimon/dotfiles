@@ -6,7 +6,6 @@ XTerm*bellIsUrgent: true
 !Xft.dpi:96
 
 URxvt*urgentOnBell: true
-!URxvt.scrollstyle: plain
 URxvt.scrollBar: false
 URxvt.letterSpace:-2
 URxvt*font: xft:Source Code Pro:style=medium:size=13,xft:DejaVu Sans Mono:style=Book:size=13

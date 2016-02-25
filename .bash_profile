@@ -10,6 +10,7 @@ fi
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
 
+shopt -s histappend
 export HISTFILESIZE=9001
 
 find_git_branch() {

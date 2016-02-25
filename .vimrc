@@ -447,6 +447,7 @@ map N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)
 let g:airline_powerline_fonts = 1
 
 let g:tmuxline_powerline_separators = 1
+let g:airline#extensions#tmuxline#enabled = 0
 
 " Section: Autocommands {{{1
 " --------------------------
@@ -585,7 +586,7 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax")
     if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
       let g:solarized_termtrans=0
       let g:solarized_degrade=0
-      let g:solarized_bold=1
+      let g:solarized_bold=0
       let g:solarized_underline=1
       let g:solarized_italic=1
       let g:solarized_termcolors=16

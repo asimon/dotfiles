@@ -67,14 +67,6 @@ color signature     brightcyan      default
 color bold          white           default
 color underline     white           default
 color normal        default         default
-#
-color body          brightgreen     default         "[;:][-o][)/(|]"    # emoticons
-color body          brightgreen     default         "[;:][)(|]"         # emoticons
-color body          brightgreen     default         "[*]?((N)?ACK|CU|LOL|SCNR|BRB|BTW|CWYL|\
-                                                     |FWIW|vbg|GD&R|HTH|HTHBE|IMHO|IMNSHO|\
-                                                     |IRL|RTFM|ROTFL|ROFL|YMMV)[*]?"
-color body          brightgreen     default         "[ ][*][^*]*[*][ ]?" # more emoticon?
-color body          brightgreen     default         "[ ]?[*][^*]*[*][ ]" # more emoticon?
 
 # PGP
 

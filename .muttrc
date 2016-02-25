@@ -7,6 +7,7 @@ set include
 set charset=utf-8
 set send_charset="us-ascii:utf-8"
 set beep_new
+set confirmappend=no
 
 set edit_headers
 set editor=vim
@@ -22,10 +23,9 @@ set sort_aux="last-date-received"
 unset collapse_unread
 
 set ssl_starttls=yes
-unset imap_passive
-#set imap_check_subscribed
 set imap_keepalive=300
-set mail_check=60
+set imap_idle="yes"
+set mail_check=30
 set header_cache=~/.cache/mutt/headers
 set message_cachedir=~/.cache/mutt/messages
 
@@ -42,7 +42,11 @@ set menu_scroll
 
 macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
-macro attach 'V' "<pipe-entry>path=\$(mktemp --suffix=.html); cat > \$path && xdg-open \$path && rm -f \$path<enter>"
+macro attach 'V' "<pipe-entry>path=\$(mktemp); cat > \$path && xdg-open \$path && rm -f \$path<enter>"
+macro index .f "<limit>(~N|~F)<Enter>" "view new/flagged"
+macro index .a  "<limit>~A<Enter>" "view all"
+macro index S "s=SPAM<Enter>" "Move email into the SPAM folder"
+macro index <delete> "s=Trash<Enter>" "Move email into the trash folder"
 
 bind pager <up> previous-line
 bind pager <down> next-line

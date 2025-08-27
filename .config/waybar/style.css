@@ -1,0 +1,93 @@
+@define-color foreground #cdd6f4;
+@define-color background #1a1b26;
+@define-color comments #565f89;
+@define-color terminal-blue #7aa2f7;
+@define-color terminal-red #f7768e;
+
+* {
+  border: none;
+  font-family: Mono Nerd Font;
+  font-size: 16px;
+}
+
+window#waybar {
+  background-color: rgba(26,27,38,0.9);
+}
+
+window#waybar > box {
+}
+
+.modules-left {
+  margin-left: 10px;
+  border-radius: 15px;
+}
+
+.modules-right {
+  margin-right: 10px;
+  border-radius: 15px;
+  padding-left: 12px;
+}
+
+.modules-center {
+  border-radius: 15px;
+}
+
+#workspaces button {
+  padding: 0 6px;
+  margin: 0 2px;
+  min-width: 16px;
+  border-radius: 5px;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+#workspaces button.persistent {
+  color: @foreground;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+  color: @foreground;
+}
+
+#workspaces button.active {
+  border: 1px solid @terminal-blue;;
+  background-color: @comments;
+  color: @foreground;
+}
+
+#workspaces button.urgent {
+  background-color: @terminal-red;
+  border: 1px solid @terminal-red;
+  color: @foreground;
+}
+
+#tray,
+#cpu,
+#clock,
+#battery,
+#network,
+#bluetooth,
+#pulseaudio,
+#systemd-failed-units,
+#workspaces {
+  min-width: 16px;
+  margin: 0 12px;
+}
+
+#cpu {
+  margin-left: 16px;
+}
+
+#custom-expand-icon {
+  margin-right: 6px;
+}
+
+tooltip {
+  padding: 2px;
+}
+
+.hidden {
+  opacity: 0;
+}
+

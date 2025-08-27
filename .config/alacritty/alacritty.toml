@@ -1,0 +1,14 @@
+[general]
+import = [
+  "~/.config/alacritty/tokyo_night.toml"
+]
+
+[window]
+blur = true
+
+[scrolling]
+history = 30000
+
+[font]
+size = 14
+

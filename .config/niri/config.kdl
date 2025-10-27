@@ -171,8 +171,9 @@ window-rule {
 //}
 
 window-rule {
-  match app-id="spotify"
-  default-column-width { proportion 0.66667; }
+  match app-id="^Spotify"
+  match app-id="^spotify"
+  default-column-width { proportion 0.9; }
   opacity 0.80
 }
 
@@ -189,6 +190,17 @@ window-rule {
 window-rule {
   match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
   default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+
+window-rule {
+  match app-id="steam" title="Steam" is-floating=false
+  default-column-width { proportion 0.66667; }
+}
+
+window-rule {
+  match app-id=r#"^steam_app_"#
+  variable-refresh-rate false
+  open-fullscreen true
 }
 
 // Example: enable rounded corners for all windows.
@@ -245,12 +257,11 @@ binds {
   XF86AudioLowerVolume allow-when-locked=true { spawn "swayosd-client" "--output-volume" "lower"; }
   XF86AudioMute        allow-when-locked=true { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
   XF86AudioMicMute     allow-when-locked=true { spawn "swayosd-client" "--input-volume" "mute-toggle"; }
-  // swayos-client --playerctl does not keep track to act on the last used player,
-  // playerctl works fine if playerctld is running.
-  XF86AudioPlay        allow-when-locked=true { spawn "playerctl" "play-pause"; }
-  XF86AudioPause       allow-when-locked=true { spawn "playerctl" "play-pause"; }
-  XF86AudioPrev        allow-when-locked=true { spawn "playerctl" "previous"; }
-  XF86AudioNext        allow-when-locked=true { spawn "playerctl" "next"; }
+  // playerctld tracks the last used player and orders `playerctl -l` accordingly
+  XF86AudioPlay        allow-when-locked=true { spawn-sh "swayosd-client --playerctl play-pause --player \"$(playerctl -l | head -1)\""; }
+  XF86AudioPause        allow-when-locked=true { spawn-sh "swayosd-client --playerctl play-pause --player \"$(playerctl -l | head -1)\""; }
+  XF86AudioNext        allow-when-locked=true { spawn-sh "swayosd-client --playerctl next --player \"$(playerctl -l | head -1)\""; }
+  XF86AudioPrev        allow-when-locked=true { spawn-sh "swayosd-client --playerctl prev --player \"$(playerctl -l | head -1)\""; }
 
   Mod+O repeat=false { toggle-overview; }
 

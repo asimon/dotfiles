@@ -48,7 +48,7 @@
   "cpu": {
     "interval": 5,
     "format": "󰍛",
-    "on-click": "alacritty -e btop"
+    "on-click": "kitty -e btop"
   },
   "clock": {
     "format": "{:%H:%M}",
@@ -137,7 +137,7 @@
   },
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "alacritty --class=Wiremix -e wiremix",
+    "on-click": "kitty --class=Wiremix -e wiremix",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,

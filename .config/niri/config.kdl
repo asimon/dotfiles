@@ -109,7 +109,8 @@ spawn-at-startup "walker" "--gapplication-service"
 spawn-at-startup "playerctld" "daemon"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "kitty"
-spawn-sh-at-startup "systemdctl --user status change-niri-wallpaper.timer || systemd-run --user --property=Type=forking --on-calendar '0/02:00' --unit change-niri-wallpaper ~/.config/niri/change-wallpaper.sh"
+spawn-sh-at-startup "systemctl --user status change-niri-wallpaper.timer || systemd-run --user --property=Type=forking --on-calendar '0/02:00' --unit change-niri-wallpaper ~/.config/niri/change-wallpaper.sh"
+spawn-at-startup "udiskie"
 
 environment {
   //DISPLAY ":0"
@@ -119,6 +120,7 @@ environment {
   QT_ENABLE_HIGHDPI_SCALING "1"
   QT_QPA_PLATFORM "wayland"
   QT_SCALE_FACTOR "1.25"
+  __GL_SHADER_DISK_CACHE_SIZE "10737418240"
 }
 
 prefer-no-csd
@@ -147,28 +149,24 @@ window-rule {
   opacity 0.92
 }
 
+window-rule {
+  match app-id=r#"firefox$"#
+  open-maximized-to-edges true
+}
+
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
   match title="Picture-in-Picture"
   default-floating-position x=90 y=90 relative-to="top-right"
   opacity 1.0
   open-floating true
-  open-focused false // does not work
+  open-maximized-to-edges false
+  open-maximized false
+  open-focused false
   shadow {
     off
   }
 }
-
-window-rule {
-  match app-id=r#"firefox$"#
-  open-maximized true
-}
-
-//window-rule {
-//  match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-//  open-floating true
-//  open-focused true
-//}
 
 window-rule {
   match app-id="^Spotify"
@@ -200,7 +198,6 @@ window-rule {
 window-rule {
   match app-id=r#"^steam_app_"#
   variable-refresh-rate false
-  open-fullscreen true
 }
 
 // Example: enable rounded corners for all windows.
@@ -426,6 +423,7 @@ binds {
   Mod+Ctrl+R { reset-window-height; }
   Mod+F { maximize-column; }
   Mod+Shift+F { fullscreen-window; }
+  Mod+Ctrl+Shift+F { maximize-window-to-edges; }
 
   // Expand the focused column to space not taken up by other fully visible columns.
   // Makes the column "fill the rest of the space".

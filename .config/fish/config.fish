@@ -1,10 +1,17 @@
+# Load environment variables
+if not set -q EDITOR \
+        && test -e ~/.config/environment.d \
+        && test -x /usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator
+    export (/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)
+end
+
 if test -d ~/.local/bin
     fish_add_path -g ~/.local/bin
 end
 
 if status is-interactive
     abbr -a -- la 'eza -a'
-    abbr -a -- ll 'eza -l'
+    abbr -a -- ll 'eza -l --time-style long-iso'
     abbr -a -- ls eza
     abbr -a -- vi nvim
     abbr -a -- vim nvim
